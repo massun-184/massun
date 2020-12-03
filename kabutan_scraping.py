@@ -1,3 +1,4 @@
+#pyqueryを使って銘柄の基本情報をピックアップ
 #銘柄名にスペースがあるとmarket情報が正しく取れないので注意
 from pyquery import PyQuery
 import time
@@ -9,7 +10,7 @@ cur = conn.cursor()
 cur.execute("CREATE TABLE IF NOT EXISTS meigara(code INTEGER PRIMARY KEY AUTOINCREMENT,name STRING,short_name STRING,market STRING,sector STRING,unit INTEGER)")
 
 #銘柄コードを記入
-code = format(7203,"04")
+code = format(int(input("コードを入力:")),"04")
 print(code)
 
 url =  "https://kabutan.jp/stock/?code={}".format(code)

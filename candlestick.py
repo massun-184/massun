@@ -9,9 +9,6 @@ import plotly.graph_objects as go
 df = pd.read_csv("7203-トヨタ自動車.csv",encoding = "shift_jis")
 #print(df.head(1))
 df = df.drop(["Unnamed: 0","出来高","終値調整"], axis = 1)
-#列名を変更
-#df.columns = ["date", "open", "high", "low", "close"]
-#df.head()
 #print(df)
 
 x = np.arange(len(df["日付"]))

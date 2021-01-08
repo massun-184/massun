@@ -97,7 +97,7 @@ input_code = [7203,9999]
 cn = code_name(input_code)
 
 #取得したい年を入力(複数年可能)
-#year = sorted(list(map(int,input("取得したい年を入力してください:").split())))
+#year = list(map(int,input("取得したい年を入力してください:").split()))
 year = sorted([2020,2019,2018])
 
 for j in cn:

@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 
 #csvファイルの読み込み
 df = pd.read_csv("7203-トヨタ自動車.csv",encoding = "shift_jis")
-#print(df.head(1))
 df = df.drop(["Unnamed: 0","出来高","終値調整"], axis = 1)
 #print(df)
 
@@ -20,7 +19,7 @@ labels = [df.loc[i*interval,"日付"] for i in range(len(df)//interval +1)]
 #print(labels)
 
 fig = go.Figure(
-    data=go.Candlestick(
+    data = go.Candlestick(
         x = x,
         open = df["始値"],
         high = df["高値"],

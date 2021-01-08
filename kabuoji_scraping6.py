@@ -83,7 +83,7 @@ code_list = []
 #※↓ダウンロードしたデータファイルは「.xls」なので「.xlsx」に変換すること
 wb = openpyxl.load_workbook("shoukencode.xlsx")
 ws = wb["Sheet1"]
-for row in ws.iter_rows(min_row=2,max_col=3,min_col=2):
+for row in ws.iter_rows(min_row = 2,max_col = 3,min_col = 2):
     values = []
     for c in row:
         values.append(c.value)
@@ -97,8 +97,8 @@ input_code = [7203,9999]
 cn = code_name(input_code)
 
 #取得したい年を入力(複数年可能)
-#year = list(map(int,input("取得したい年を入力してください:").split()))
-year = [2018,2019,2020]
+#year = sorted(list(map(int,input("取得したい年を入力してください:").split())))
+year = sorted([2020,2019,2018])
 
 for j in cn:
     k = j[0]
